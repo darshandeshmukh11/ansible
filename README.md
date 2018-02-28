@@ -35,5 +35,22 @@ Watermelon:
   Fat: 5
 ```  
 
+##### List of dictionaries
+```
+- Color: Yellow
+  Model:
+    Name: TVSStar
+    Model: 2005
+  Trnasmission: Manual
+  Price: $4000
+    
+- Color: Red
+  Model:
+    Name: Honda
+    Model: 2007
+  Trnasmission: Automatic
+  Price: $5000    
+  
+
   
   
