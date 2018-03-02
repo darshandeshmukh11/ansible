@@ -50,7 +50,14 @@ Watermelon:
     Model: 2007
   Trnasmission: Automatic
   Price: $5000    
+  ```
+  #### Setup and sample example of Ansible
+  Provision Control machine and other web app hosts (app01, app02, db01, lb01) in a same Vagrantfile. 
+  ```
+  git clone https://github.com/darshandeshmukh11/ansible
+  cd ansible
+  vagrant up
+  ```
   
-
   
   
