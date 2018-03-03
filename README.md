@@ -67,4 +67,6 @@ Watermelon:
   ```
   
   List out all the hosts on control machine
-  $ ansible --list-hosts all  
+  ```
+  $ ansible --list-hosts all  # Located at cat /etc/ansible/hosts
+  ```
