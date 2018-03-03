@@ -66,4 +66,5 @@ Watermelon:
   $ sudo apt-get install ansible
   ```
   
-  
+  List out all the hosts on control machine
+  $ ansible --list-hosts all  
