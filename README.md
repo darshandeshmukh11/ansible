@@ -76,7 +76,8 @@ Watermelon:
   $ touch ansible.cfg
   $ vi ansible.cfg
   Add below content and save the file 
-  ```[defaults]
-     inventory = ./dev```
+  [defaults]
+  inventory = ./dev
+  ```
   
  
