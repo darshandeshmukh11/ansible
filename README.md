@@ -77,7 +77,34 @@ Watermelon:
   $ vi ansible.cfg
   Add below content and save the file 
   [defaults]
-  inventory = ./dev
+  inventory = ./dev #dev will hold your host information and can be a prt of your source code
   ```
-  
+  Now you dont need to use -i option to read default configuration
+  ```
+  $ ansible --list-hosts all
+  [WARNING]: Found both group and host with same name: control
+
+  hosts (5):
+    control
+    db01
+    app01
+    app02
+    lb01
  
+  vagrant@vagrant-ubuntu-trusty-64:/vagrant$ ansible --list-hosts control
+  [WARNING]: Found both group and host with same name: control
+
+  hosts (1):
+    control
+ vagrant@vagrant-ubuntu-trusty-64:/vagrant$ ansible --list-hosts database
+ [WARNING]: Found both group and host with same name: control
+
+  hosts (1):
+    db01
+ vagrant@vagrant-ubuntu-trusty-64:/vagrant$ ansible --list-hosts webserver
+ [WARNING]: Found both group and host with same name: control
+
+  hosts (2):
+    app01
+    app02
+``` 
