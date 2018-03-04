@@ -108,3 +108,13 @@ Watermelon:
     app01
     app02
 ``` 
+##### Playbooks
+Create a new folder (called playbooks) and go ahead to add a new playbook (hostname.yml) with below content 
+```
+---
+  - hosts: all
+    tasks:
+      - command: hostname
+
+$ ansible-playbook playbooks/hostname.yml
+```
