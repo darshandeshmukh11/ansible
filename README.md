@@ -70,3 +70,13 @@ Watermelon:
   ```
   $ ansible --list-hosts all  # Located at cat /etc/ansible/hosts
   ```
+  Ansible stores this configuration at ```/etc/ansible/ansible.cfg``` 
+  To overwrite this configuration - 
+  ```
+  $ touch ansible.cfg
+  $ vi ansible.cfg
+  Add below content and save the file 
+  ```[defaults]
+     inventory = ./dev```
+  
+ 
