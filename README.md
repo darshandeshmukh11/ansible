@@ -1,3 +1,11 @@
+### Ansible use cases
+- Config Management
+- App Deployment
+- Provisioning
+- Continuous Delivery
+- Security and Compliance
+- Orchestration
+
 ### Basics of YAML
 ##### Key Value Pair
 
