@@ -6,6 +6,17 @@
 - Security and Compliance
 - Orchestration
 
+### Basics - 
+**Playbooks** contains **plays**
+Plays contains **tasks**
+Tasks call **module**
+
+**Tasks** run **sequentially**
+
+**Handlers** are triggered by tasks and run once at the end of plays.
+
+
+
 ### Basics of YAML
 ##### Key Value Pair
 
