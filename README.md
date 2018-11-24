@@ -29,7 +29,7 @@ Tasks call **module**
   
   tasks:
   - name: install httpd
-    yum: name=httpd state=latest
+    yum: name=httpd state=latest # module standard structure (module: directive1=value directive2=value)
   - name: write apache config file
     template: src=srv/httpd.j2 dest=/etc/httpd.conf # Retrives the variables defined at the top of playbook
     notify: # Calls handlers
