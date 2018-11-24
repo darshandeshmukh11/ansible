@@ -15,6 +15,32 @@ Tasks call **module**
 
 **Handlers** are triggered by tasks and run once at the end of plays.
 
+### Example playbook with 1 play, 3 tasks and a handler
+```
+--- # 3 dashes at the dop of the file indicates that this is YAML file
+- name: install and start apache 
+  hosts: web # Specifies which inventory gruoup this playbook is to be applied
+  remote_user: alice
+  remote_method: sudo # Directive for escalates previliages on target system
+  become_user: root
+  vars:
+    http_port: 80
+    max_client: 200
+  
+  tasks:
+  - name: install httpd
+    yum: name=httpd state=latest
+  - name: write apache config file
+    template: src=srv/httpd.j2 dest=/etc/httpd.conf # Retrives the variables defined at the top of playbook
+    notify: # Calls handlers
+    - restart apache
+  - name: start httpd
+    service: name=httpd state=running
+  
+  - handlers: restart apache
+    service: name=httpd state:restarted
+```
+
 
 
 ### Basics of YAML
