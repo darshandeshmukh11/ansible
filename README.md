@@ -15,6 +15,8 @@ Tasks call **module**
 
 **Handlers** are triggered by tasks and run once at the end of plays.
 
+**Roles** are special playbooks that are self contained with tasks, variable, configurations templates and other supporting files.
+
 ### Example playbook with 1 play, 3 tasks and a handler
 ```
 --- # 3 dashes at the dop of the file indicates that this is YAML file
