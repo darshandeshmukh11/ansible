@@ -176,3 +176,9 @@ Create a new folder (called playbooks) and go ahead to add a new playbook (hostn
 
 $ ansible-playbook playbooks/hostname.yml
 ```
+
+##### Ansible Modules
+Modules can be executed with `-a <module-name>` flag
+`e.g. ansible -i hosts -m shell -a 'uname -a' host0.example.org`
+
+
