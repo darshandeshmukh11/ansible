@@ -117,6 +117,17 @@ Watermelon:
   ```
   $ ansible --list-hosts all  # Located at cat /etc/ansible/hosts
   ```
+  Contents of `hosts` can be configured as below 
+  `$ cat hosts` 
+  ```
+  host0.example.org ansible_host=172.18.0.2 ansible_user=root
+  host1.example.org ansible_host=172.18.0.3 ansible_user=root
+  host2.example.org ansible_host=172.18.0.4 ansible_user=root
+  ```
+  `ansible_host` is a special variable that sets the IP ansible will use when trying to connect to this host.
+
+  `ansible_user` is another special variable that tells ansible to connect as this user when using ssh. By default ansible would use       your current username, or use another default provided in ~/.ansible.cfg (remote_user).
+
   Ansible stores this configuration at ```/etc/ansible/ansible.cfg``` 
   To overwrite this configuration - 
   ```
