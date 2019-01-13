@@ -209,3 +209,16 @@ ubuntu
 debian
 ```
 Grouping of course, leverages configuration mutualization.
+
+##### Looping Ansible commands
+Ansible provides a more readable way to write this. Ansible can loop over a series of items, and use each item in an action like this:
+```
+...
+- name: Installs necessary packages
+apt: pkg={{ item }} state=latest
+with_items:
+  - apache2
+  - libapache2-mod-php
+  - git
+...
+```
