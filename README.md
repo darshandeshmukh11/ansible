@@ -181,4 +181,31 @@ $ ansible-playbook playbooks/hostname.yml
 Modules can be executed with `-a <module-name>` flag
 `e.g. ansible -i hosts -m shell -a 'uname -a' host0.example.org`
 
+##### Ansible Groups
+Grouping hosts
+Hosts in inventory can be grouped arbitrarily. For instance, you could have a debian group, a web-servers group, a production group,
+etc...
+```
+[debian]
+host0.example.org
+host1.example.org
+host2.example.org
+```
+This can even be expressed shorter:
+```
+[debian]
+host[0:2].example.org
+```
+If you wish to use child groups, just define a [groupname:children] and add child groups in it. For instance, let's say we have various flavors of linux running, we could organize our inventory like this:
+```
+[ubuntu]
+host0.example.org
 
+[debian]
+host[1:2].example.org
+
+[linux:children]
+ubuntu
+debian
+```
+Grouping of course, leverages configuration mutualization.
